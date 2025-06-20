@@ -1,364 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>VisualSoul Photography</title>
-<style>
-  /* Reset and base */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    />
 
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #222;
-    background: #f5f5f7;
-    line-height: 1.6;
-  }
+    <title>Flamingo | Home</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-  a {
-    color: #e76f51;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  a:hover {
-    color: #f4a261;
-  }
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#fbf9f9] group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1e9e9] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#191010]">
+            <div class="size-4">
+              <!-- <img src="img/logo.svg" alt="Stitch Design Logo" class="h-4 w-4" /> -->
+              </svg>
+            </div>
+            <!-- <img src="img/logo.jpg" alt="Stitch Design Logo" class="h-8 w-auto object-contain" /> -->
+              <img src="img/logo.svg" alt="Stitch Design Logo" class="h-16 w-40" />
 
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-    z-index: 1000;
-  }
-
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #e76f51;
-    letter-spacing: 2px;
-    cursor: default;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
-
-  nav ul li {
-    font-weight: 600;
-    font-size: 1rem;
-  }
-
-  nav ul li a {
-    padding: 6px 10px;
-    border-radius: 4px;
-  }
-
-  nav ul li a:hover,
-  nav ul li a.active {
-    background-color: #e76f51;
-    color: #fff;
-  }
-
-  main {
-    margin-top: 60px;
-  }
-
-  /* Hero section */
-  .hero {
-    height: 80vh;
-    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 0 20px;
-    position: relative;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(39, 39, 39, 0.5);
-    z-index: 0;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  .hero p {
-    font-size: 1.3rem;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-  }
-
-  /* Sections */
-  section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #e76f51;
-    text-align: center;
-  }
-
-  /* About */
-  #about p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: #444;
-  }
-
-  /* Works - portfolio grid */
-  #works .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 20px;
-  }
-  #works .portfolio-item {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background: #fff;
-  }
-  #works .portfolio-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgb(0 0 0 / 0.25);
-  }
-  #works img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  #works .caption {
-    padding: 12px 15px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
-  }
-
-  /* Query/contact form */
-  #query form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px 25px;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
-  }
-
-  #query label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    margin-top: 15px;
-    color: #222;
-  }
-
-  #query input[type="text"],
-  #query input[type="email"],
-  #query textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1.8px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-    font-size: 1rem;
-  }
-  #query input[type="text"]:focus,
-  #query input[type="email"]:focus,
-  #query textarea:focus {
-    border-color: #e76f51;
-    outline: none;
-  }
-  #query textarea {
-    resize: vertical;
-    min-height: 120px;
-    font-family: inherit;
-  }
-
-  #query button {
-    margin-top: 20px;
-    background: #e76f51;
-    color: #fff;
-    border: none;
-    padding: 14px 24px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  #query button:hover {
-    background: #f4a261;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 25px 10px;
-    font-size: 0.9rem;
-    color: #777;
-    background: #eee;
-  }
-
-  /* Responsive adjustments */
-  @media only screen and (max-width: 480px) {
-    .hero h1 {
-      font-size: 2.2rem;
-    }
-    nav ul {
-      gap: 18px;
-    }
-  }
-
-</style>
-</head>
-<body>
-
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo">VisualSoul</div>
-      <ul>
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#works" class="nav-link">Works</a></li>
-        <li><a href="#query" class="nav-link">Query</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero" aria-label="Photography Company Introduction">
-    <div class="hero-content">
-      <h1>VisualSoul Photography</h1>
-      <p>Capturing your moments, telling your stories.</p>
-    </div>
-  </section>
-
-  <section id="about" aria-labelledby="about-title">
-    <h2 id="about-title">About Us</h2>
-    <p>At VisualSoul, we believe the perfect photograph captures more than just an image — it captures emotion, memories, and life itself. Our professional team specializes in wedding, portrait, and landscape photography, bringing artistic vision and technical expertise to every shot.</p>
-  </section>
-
-  <section id="works" aria-labelledby="works-title">
-    <h2 id="works-title">Our Works</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item" tabindex="0">
-        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bride and groom hugging on wedding day" />
-        <div class="caption">Wedding Moments</div>
-      </div>
-      <div class="portfolio-item" tabindex="0">
-        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Portrait of a woman in natural sunlight" />
-        <div class="caption">Portrait Photography</div>
-      </div>
-      <div class="portfolio-item" tabindex="0">
-        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mountain landscape with lake" />
-        <div class="caption">Landscape Shots</div>
-      </div>
-      <div class="portfolio-item" tabindex="0">
-        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Black and white artistic portrait" />
-        <div class="caption">Artistic Black &amp; White</div>
+            <!-- <h2 class="text-[#191010] text-lg font-bold leading-tight tracking-[-0.015em]">CaptureLens</h2> -->
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#191010] text-sm font-medium leading-normal" href="index.html">Home</a>
+              <a class="text-[#191010] text-sm font-medium leading-normal" href="Portfolio.html">Portfolio</a>
+              <a class="text-[#191010] text-sm font-medium leading-normal" href="aboutus.html">About</a>
+              <a class="text-[#191010] text-sm font-medium leading-normal" href="contact.html">Contact</a>
+            </div>
+           <a href="contact.html"> <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#dd8c8c] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Book a Shoot</span>
+            </button></a>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAl62t8UJYwvYBUnEZmIoX22oWDayClIH1jIeMrnmXRMa_uSxrs4-im49z42d-cU3CYPkdzFddLzgZR1-vTGsAqiREKCcVP3Py_gPhFJbRkQ0SIBrnbHzmcGPhKI3kb8o-y073kp9GpGXkO3Vxn9zn676SKSKUm0H4Oz9_jTFZA27HDgp3pEj5emY_w7Q1KhgVxSmaMynR7bZqgIiSZtXxMBcaWVe22pjbq3A4Ph6V6Z-akJt-RT6wlnN3QfHRi6Ti0-h4vvIC2up_6");'
+                >
+                  <div class="flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Elevate Your Story with Stunning Visuals
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Specializing in lifestyle and brand photography for businesses and individuals.
+                    </h2>
+                  </div>
+                  <a href="Portfolio.html"><button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dd8c8c] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">View Portfolio</span>
+                  </button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+ <!--Portfolio section-->
+ 
+        </div>
       </div>
     </div>
-  </section>
-
-  <section id="query" aria-labelledby="query-title">
-    <h2 id="query-title">Get in Touch</h2>
-    <form id="contactForm" aria-label="Contact form for inquiries">
-      <label for="name">Name *</label>
-      <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" />
-
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
-
-      <label for="message">Message *</label>
-      <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
-
-      <button type="submit">Send Query</button>
-    </form>
-    <p id="formMessage" style="text-align:center; margin-top:15px; font-weight:600;"></p>
-  </section>
-</main>
-
-<footer>
-  &copy; 2024 VisualSoul Photography. All rights reserved.
-</footer>
-
-<script>
-  // Smooth scrolling for nav links
-  document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if(targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 58,
-          behavior: 'smooth'
-        });
-      }
-      // update active class
-      document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove('active'));
-      link.classList.add('active');
-    });
-  });
-
-  // Contact form submission handler
-  const form = document.getElementById('contactForm');
-  const formMessage = document.getElementById('formMessage');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Simple form validation already handled by required attribute
-    // Show a mock success message
-    formMessage.style.color = 'green';
-    formMessage.textContent = 'Thank you for your inquiry! We will get back to you soon.';
-    form.reset();
-  });
-</script>
-
-</body>
+   
+   
+            
+  </body>
 </html>
-
