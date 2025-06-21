@@ -12,86 +12,84 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#fbf8f8] group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f2e8e8] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#1a0f0f]">
+        <header class="flex flex-col sm:flex-row items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f2e8e8] px-4 sm:px-10 py-3">
+          <div class="flex items-center gap-4 text-[#1a0f0f] mb-2 sm:mb-0">
             <div class="size-4">
               
             </div>
-            <!-- <h2 class="text-[#1a0f0f] text-lg font-bold leading-tight tracking-[-0.015em]">Capture Moments</h2> -->
-             <img src="img/logo.svg" alt="Stitch Design Logo" class="h-16 w-40" />
+            <img src="img/logo.svg" alt="Stitch Design Logo" class="h-12 w-32 sm:h-16 sm:w-40" />
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
+          <div class="flex flex-1 justify-end gap-4 sm:gap-8">
+            <div class="flex items-center gap-4 sm:gap-9">
               <a class="text-[#1a0f0f] text-sm font-medium leading-normal" href="index.html">Home</a>
               <a class="text-[#1a0f0f] text-sm font-medium leading-normal" href="aboutus.html">About</a>
-              <!-- <a class="text-[#1a0f0f] text-sm font-medium leading-normal" href="#">Services</a> -->
-              <!-- <a class="text-[#1a0f0f] text-sm font-medium leading-normal" href="Portfolio.html">Portfolio</a> -->
               <a class="text-[#1a0f0f] text-sm font-medium leading-normal" href="contact.html">Contact</a>
             </div>
             <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-sm font-bold leading-normal tracking-[0.015em]"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-sm font-bold leading-normal tracking-[0.015em] mt-2 sm:mt-0"
             >
               <span class="truncate">Book a Session</span>
             </button>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="px-4 sm:px-10 md:px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-full md:max-w-[960px] flex-1">
             <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#1a0f0f] tracking-light text-[32px] font-bold leading-tight">Portfolio</p>
-                <p class="text-[#935353] text-sm font-normal leading-normal">
+              <div class="flex min-w-0 sm:min-w-72 flex-col gap-3">
+                <p class="text-[#1a0f0f] tracking-light text-[28px] sm:text-[32px] font-bold leading-tight">Portfolio</p>
+                <p class="text-[#935353] text-xs sm:text-sm font-normal leading-normal">
                   Explore a curated selection of my finest work, showcasing a range of styles and subjects. Each gallery represents a unique facet of my photographic journey,
                   capturing moments and emotions with precision and artistry.
                 </p>
               </div>
             </div>
-            <h2 class="text-[#1a0f0f] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Weddings</h2>
-            <div class="p-4">
+            <h2 class="text-[#1a0f0f] text-[18px] sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5">Weddings</h2>
+            <div class="p-2 sm:p-4">
               <div
-                class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[132px]"
+                class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[80px] sm:pt-[132px]"
                 style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5QQvy_8OHvlBZ4g770SR1HScyoZ22fE9E1K4HzxAWi-62AZSfs8b4udeE4uKmM9wfpEHY8DsK9YX0lKfxgHjX4AoPOkHOPFnevEQcBAohmDWyiJVdIJSs7ovYM4HJWb8_pfOjBYxj9t509n7rV4UU8H_y8XTaDaSINcdWdbTltS9aX3oAdnz4Yv0iAkL5YQ6Vd3oi4wZO0Mmju-pef-EpDlok18fSCgTBHVQkDWjAtB21SzUNMRUN6hEX71LVtYIUpuDPHm0rbycP");'
               >
-                <div class="flex w-full items-end justify-between gap-4 p-4">
-                  <p class="text-white tracking-light text-2xl font-bold leading-tight flex-1">Weddings</p>
+                <div class="flex w-full flex-col sm:flex-row items-end justify-between gap-2 sm:gap-4 p-2 sm:p-4">
+                  <p class="text-white tracking-light text-lg sm:text-2xl font-bold leading-tight flex-1">Weddings</p>
                   <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-sm font-bold leading-normal tracking-[0.015em]"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] mt-2 sm:mt-0"
                   >
                     <span class="truncate">View Wedding Gallery</span>
                   </button>
                 </div>
               </div>
             </div>
-            <h2 class="text-[#1a0f0f] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Family Portraits</h2>
-            <div class="p-4">
+            <h2 class="text-[#1a0f0f] text-[18px] sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5">Family Portraits</h2>
+            <div class="p-2 sm:p-4">
               <div
-                class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[132px]"
+                class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[80px] sm:pt-[132px]"
                 style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaTwqRQdf6Mg6ccR0ZiIC5pc6pq-poLUlj3_tRk57ksZNYm0XENFOxXIJgTbrFMoYYYkHWKckZdyhgQJuLRY7lszUB57a6EZy_Tr7WxTXEvAJyFpvheDOeMuZl_jIXgz7Wc5AxM-iQ6cvrrov6M0x1PX9QnUbzQ9bk_3qBnPKwEEzOfB50RCirWSMe0U9yJKNT4h8X4aHYWaoJy75UXyZ4ELo1ZyjMAptgkk7ORpPpoSlUk6A7qn6Is_5pwPg1jvQ7G__NAVx9V91i");'
               >
-                <div class="flex w-full items-end justify-between gap-4 p-4">
-                  <p class="text-white tracking-light text-2xl font-bold leading-tight flex-1">Family Portraits</p>
+                <div class="flex w-full flex-col sm:flex-row items-end justify-between gap-2 sm:gap-4 p-2 sm:p-4">
+                  <p class="text-white tracking-light text-lg sm:text-2xl font-bold leading-tight flex-1">Family Portraits</p>
                   <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-sm font-bold leading-normal tracking-[0.015em]"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] mt-2 sm:mt-0"
                   >
                     <span class="truncate">View Family Portraits Gallery</span>
                   </button>
                 </div>
               </div>
             </div>
-            <h2 class="text-[#1a0f0f] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Travel</h2>
-            <div class="p-4">
+            <h2 class="text-[#1a0f0f] text-[18px] sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5">Travel</h2>
+            <div class="p-2 sm:p-4">
               <div
-                class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[132px]"
+                class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[80px] sm:pt-[132px]"
                 style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDM43G5xzygxeQ9nHnmkgPNoPkKTgnxtYSpY_HIYw71hpXb6nxRVm03BIA3tUNMvllxm0BARC9Fl6szVoLBy4-_r3oI8aXFoWoBxLdLf7UqpXyXBeMW8w-HR_3FjL9OHYd1klE5TPWskcHpSCriv-rs0RibPxULQgWOCcdvYHBUQnYVjAWTdi7kTuZcmbmkBPiUAJrhA0RMwBW9geWwSN7HnT9GIJ-VeQ-cRYdDrBfc6zNMT2z0dJlV_4TmuChuVJ4LU6ZplnNkD7dN");'
               >
-                <div class="flex w-full items-end justify-between gap-4 p-4">
-                  <p class="text-white tracking-light text-2xl font-bold leading-tight flex-1">Travel</p>
+                <div class="flex w-full flex-col sm:flex-row items-end justify-between gap-2 sm:gap-4 p-2 sm:p-4">
+                  <p class="text-white tracking-light text-lg sm:text-2xl font-bold leading-tight flex-1">Travel</p>
                   <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-sm font-bold leading-normal tracking-[0.015em]"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3333] text-[#fbf8f8] text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] mt-2 sm:mt-0"
                   >
                     <span class="truncate">View Travel Gallery</span>
                   </button>
@@ -101,16 +99,16 @@
           </div>
         </div>
         <footer class="flex justify-center">
-          <div class="flex max-w-[960px] flex-1 flex-col">
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+          <div class="flex max-w-full md:max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-2 sm:px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-6 @[480px]:flex-row @[480px]:justify-around">
                 <a class="text-[#935353] text-base font-normal leading-normal min-w-40" href="#">Home</a>
                 <a class="text-[#935353] text-base font-normal leading-normal min-w-40" href="#">About</a>
                 <a class="text-[#935353] text-base font-normal leading-normal min-w-40" href="#">Services</a>
                 <a class="text-[#935353] text-base font-normal leading-normal min-w-40" href="#">Portfolio</a>
                 <a class="text-[#935353] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
               </div>
-              <div class="flex flex-wrap justify-center gap-4">
+              <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
                 <a href="#">
                   <div class="text-[#935353]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">

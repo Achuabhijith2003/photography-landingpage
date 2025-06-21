@@ -12,12 +12,13 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#fbf9f9] group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1e9e9] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#191010]">
+        <header class="flex flex-col sm:flex-row items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1e9e9] px-4 sm:px-10 py-3">
+          <div class="flex items-center gap-4 text-[#191010] mb-2 sm:mb-0">
             <div class="size-4">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -28,24 +29,25 @@
             </div>
             <h2 class="text-[#191010] text-lg font-bold leading-tight tracking-[-0.015em]">CaptureLens</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
+          <div class="flex flex-1 justify-end gap-4 sm:gap-8">
+            <div class="flex items-center gap-4 sm:gap-9">
               <a class="text-[#191010] text-sm font-medium leading-normal" href="index.html">Home</a>
               <a class="text-[#191010] text-sm font-medium leading-normal" href="Portfolio.html">Portfolio</a>
-              <!-- <a class="text-[#191010] text-sm font-medium leading-normal" href="services.html">Services</a> -->
               <a class="text-[#191010] text-sm font-medium leading-normal" href="contact.html">Contact</a>
             </div>
             <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f1e9e9] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em]"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f1e9e9] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em] mt-2 sm:mt-0"
             >
               <span class="truncate">Book a Session</span>
             </button>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#191010] tracking-light text-[32px] font-bold leading-tight min-w-72">About Me</p></div>
-            <p class="text-[#191010] text-base font-normal leading-normal pb-3 pt-1 px-4">
+        <div class="px-4 sm:px-10 md:px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-full md:max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#191010] tracking-light text-[28px] sm:text-[32px] font-bold leading-tight min-w-0">About Me</p>
+            </div>
+            <p class="text-[#191010] text-base font-normal leading-normal pb-3 pt-1 px-2 sm:px-4">
               I'm Ethan Carter, a professional photographer with over 10 years of experience capturing life's most precious moments. My journey began with a simple love for
               storytelling, which quickly evolved into a passion for visual artistry. I specialize in portrait and event photography, aiming to create images that are not only
               visually stunning but also emotionally resonant. My approach is collaborative and personalized, ensuring that each client's unique vision is brought to life. I
@@ -53,18 +55,18 @@
               Beyond the technical aspects of photography, I strive to create a comfortable and enjoyable experience for every client, making the process as memorable as the final
               product. I'm dedicated to continuous learning and staying at the forefront of industry trends, ensuring that my work remains fresh, innovative, and timeless.
             </p>
-            <h3 class="text-[#191010] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Why Choose CaptureLens?</h3>
-            <p class="text-[#191010] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            <h3 class="text-[#191010] text-lg font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-2 pt-4">Why Choose CaptureLens?</h3>
+            <p class="text-[#191010] text-base font-normal leading-normal pb-3 pt-1 px-2 sm:px-4">
               Here are a few reasons why clients consistently choose CaptureLens for their photography needs: * **Personalized Approach:** I take the time to understand your vision
               and tailor each session to your specific needs and preferences. * **Professional Expertise:** With over a decade of experience, I bring a wealth of knowledge and
               technical skill to every project. * **High-Quality Results:** I use state-of-the-art equipment and meticulous editing techniques to deliver images that exceed
               expectations. * **Client Satisfaction:** My goal is to ensure that every client is thrilled with their final photos and the overall experience. * **Creative Vision:**
               I bring a unique artistic perspective to each shoot, capturing moments in a way that is both beautiful and meaningful.
             </p>
-            <div class="flex w-full grow bg-[#fbf9f9] @container p-4">
+            <div class="flex w-full grow bg-[#fbf9f9] @container p-2 sm:p-4">
               <div class="w-full gap-1 overflow-hidden bg-[#fbf9f9] @[480px]:gap-2 aspect-[2/3] rounded-xl flex">
                 <div
-                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1 min-h-[200px] sm:min-h-0"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHNTjmQXxg7iREXXZrdcmup0DCm5htX7rTltpkcxrzoPUsk3xdUx4Brw5M3HBatCMaUmgUgpma_Jw781d4_5iGMTiXqmTFvLX0lz8txctoQz6ugrCd9pDawh0joodDshhBhdw1a0iAhXIGe2gSaPvvPyJqAhY9osUgTIZA3LOgpL-8z7TZpVeMXsXfFjWiDQ9ufxCAZ_JedWyazau2TRuU6BWO1nCJEFqdFWrEt2eqgqPux3QQK-KZKX_V--vu-wJwZllZQ586bgrr");'
                 ></div>
               </div>

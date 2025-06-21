@@ -12,55 +12,53 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#fbf9f9] group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1e9e9] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#191010]">
+        <header class="flex flex-col sm:flex-row items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1e9e9] px-4 sm:px-10 py-3">
+          <div class="flex items-center gap-4 text-[#191010] mb-2 sm:mb-0">
             <div class="size-4">
               <!-- <img src="img/logo.svg" alt="Stitch Design Logo" class="h-4 w-4" /> -->
               </svg>
             </div>
-            <!-- <img src="img/logo.jpg" alt="Stitch Design Logo" class="h-8 w-auto object-contain" /> -->
-              <img src="img/logo.svg" alt="Stitch Design Logo" class="h-16 w-40" />
-
-            <!-- <h2 class="text-[#191010] text-lg font-bold leading-tight tracking-[-0.015em]">CaptureLens</h2> -->
+            <img src="img/logo.svg" alt="Stitch Design Logo" class="h-12 w-32 sm:h-16 sm:w-40" />
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
+          <div class="flex flex-1 justify-end gap-4 sm:gap-8">
+            <div class="flex items-center gap-4 sm:gap-9">
               <a class="text-[#191010] text-sm font-medium leading-normal" href="index.html">Home</a>
               <a class="text-[#191010] text-sm font-medium leading-normal" href="Portfolio.html">Portfolio</a>
               <a class="text-[#191010] text-sm font-medium leading-normal" href="aboutus.html">About</a>
               <a class="text-[#191010] text-sm font-medium leading-normal" href="contact.html">Contact</a>
             </div>
-           <a href="contact.html"> <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#dd8c8c] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em]"
+            <a href="contact.html"><button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#dd8c8c] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em] mt-2 sm:mt-0"
             >
               <span class="truncate">Book a Shoot</span>
             </button></a>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="px-4 sm:px-10 md:px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-full md:max-w-[960px] flex-1">
             <div class="@container">
               <div class="@[480px]:p-4">
                 <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  class="flex min-h-[320px] sm:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-2 sm:p-4"
                   style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAl62t8UJYwvYBUnEZmIoX22oWDayClIH1jIeMrnmXRMa_uSxrs4-im49z42d-cU3CYPkdzFddLzgZR1-vTGsAqiREKCcVP3Py_gPhFJbRkQ0SIBrnbHzmcGPhKI3kb8o-y073kp9GpGXkO3Vxn9zn676SKSKUm0H4Oz9_jTFZA27HDgp3pEj5emY_w7Q1KhgVxSmaMynR7bZqgIiSZtXxMBcaWVe22pjbq3A4Ph6V6Z-akJt-RT6wlnN3QfHRi6Ti0-h4vvIC2up_6");'
                 >
                   <div class="flex flex-col gap-2 text-center">
                     <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                      class="text-white text-2xl sm:text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
                     >
                       Elevate Your Story with Stunning Visuals
                     </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    <h2 class="text-white text-xs sm:text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
                       Specializing in lifestyle and brand photography for businesses and individuals.
                     </h2>
                   </div>
                   <a href="Portfolio.html"><button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dd8c8c] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dd8c8c] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] mt-2"
                   >
                     <span class="truncate">View Portfolio</span>
                   </button></a>
@@ -68,13 +66,10 @@
               </div>
             </div>
           </div>
- <!--Portfolio section-->
+          <!--Portfolio section-->
  
         </div>
       </div>
     </div>
-   
-   
-            
   </body>
 </html>
