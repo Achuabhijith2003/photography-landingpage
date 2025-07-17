@@ -1,35 +1,35 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
-    />
-
-    <title>Stitch Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-     <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitch Design - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
         /* Custom font for the heading */
         .font-pacifico {
             font-family: 'Pacifico', cursive;
         }
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* A light grey background */
         }
         /* Style for the image container to create a polaroid effect */
         .polaroid {
             background-color: white;
             padding: 1rem;
-            padding-bottom: 3rem; /* More space at the bottom for a classic look */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex; /* Use flexbox to center the image */
+            flex-direction: column;
+            justify-content: center;
         }
         .polaroid:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: scale(1.03) rotate(0deg) !important; /* Straighten on hover */
             box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 12px 40px rgba(0,0,0,0.2);
             z-index: 10;
         }
@@ -41,109 +41,122 @@
         .rotate-neg-3 { transform: rotate(-3deg); }
         .rotate-3 { transform: rotate(3deg); }
     </style>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#fbf9f9] group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1e9e9] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#191010]">
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#fbf9f9] overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header -->
+            <header class="sticky top-0 z-20 bg-white/80 backdrop-blur-lg border-b border-solid border-b-[#f1e9e9] px-4 sm:px-6 lg:px-10 py-3">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                   <div class="flex items-center gap-4 text-[#191010] mb-2 sm:mb-0">
             <div class="size-4">
-              <!-- <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_6_535)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
-                </defs>
-              </svg> -->
+              <!-- <img src="img/logo.svg" alt="Stitch Design Logo" class="h-4 w-4" /> -->
+              </svg>
             </div>
-            <!-- <h2 class="text-[#191010] text-lg font-bold leading-tight tracking-[-0.015em]">Capture Moments</h2> -->
-              <img src="img/Flamingo1.png" alt="Stitch Design Logo" class="h-12 w-32 sm:h-16 sm:w-40" />
+          <img src="img/Flamingo1.png" alt="Stitch Design Logo" class="h-12 w-32 sm:h-16 sm:w-40" />
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#191010] text-sm font-medium leading-normal" href="Portfolio.html">Portfolio</a>
-              <a class="text-[#191010] text-sm font-medium leading-normal" href="aboutus.html">About</a>
-              <a class="text-[#191010] text-sm font-medium leading-normal" href="contact.html">Contact</a>
-            </div>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db8989] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Book a Shoot</span>
-            </button>
-          </div>
-        </header>
-        <!-- Responsive Photo Collage Grid -->
-        <!-- 
-            Responsive Photo Collage Grid 
-            - On small screens, it's a 1-column layout.
-            - On medium screens, 2 columns.
-            - On large screens, a more complex 4-column grid.
-            - `auto-rows-[300px]` or a similar value gives the grid rows a consistent height.
-        -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 auto-rows-[350px]">
 
-            <!-- Image 1: Spans 2 columns and 2 rows on large screens -->
-            <div class="lg:col-span-0 lg:row-span-0 rounded-xl  polaroid rotate-neg-2">
-                <!-- 
-                    KEY CHANGE: Used `object-contain` instead of `object-cover`.
-                    `object-contain` scales the image to fit inside the element's content box
-                    while maintaining its aspect ratio. This prevents cropping.
-                -->
-                <img src="img\Baby_brithday\bb1.jpg" 
-                     alt="Baby's welcome home photo" 
-                     class="w-full h-full object-contain">
-                <!-- <div class="font-marker polaroid-caption">Welcome Home</div> -->
-            </div>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+                        <a class="text-[#191010] text-sm font-medium leading-normal hover:text-[#db8989] transition-colors" href="#">Portfolio</a>
+                        <a class="text-[#191010] text-sm font-medium leading-normal hover:text-[#db8989] transition-colors" href="#">About</a>
+                        <a class="text-[#191010] text-sm font-medium leading-normal hover:text-[#db8989] transition-colors" href="#">Contact</a>
+                        <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[#db8989] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#c97878] transition-colors">
+                            <span class="truncate">Book a Shoot</span>
+                        </button>
+                    </nav>
 
-            <!-- Image 2 -->
-            <div class="rounded-xl overflow-hidden polaroid rotate-1">
-                <img src="img\Baby_brithday\bb2.jpg" 
-                     alt="Baby's first smile" 
-                     class="w-full h-full object-contain">
-                <!-- <div class="font-marker polaroid-caption">First Smile</div> -->
-            </div>
+                    <!-- Mobile Menu Button (Hamburger) -->
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-[#191010] focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
-            <!-- Image 3 -->
-            <div class="rounded-xl overflow-hidden polaroid rotate-neg-1">
-                <img src="img\Baby_brithday\bb3.jpg" 
-                     alt="Baby's bath time" 
-                     class="w-full h-full object-contain">
-                <!-- <div class="font-marker polaroid-caption">Bath Time!</div> -->
-            </div>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <a href="#" class="block py-2 px-4 text-sm text-[#191010] hover:bg-gray-200 rounded">Portfolio</a>
+                    <a href="#" class="block py-2 px-4 text-sm text-[#191010] hover:bg-gray-200 rounded">About</a>
+                    <a href="#" class="block py-2 px-4 text-sm text-[#191010] hover:bg-gray-200 rounded">Contact</a>
+                    <button class="w-full mt-2 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db8989] text-[#191010] text-sm font-bold leading-normal tracking-[0.015em]">
+                        <span class="truncate">Book a Shoot</span>
+                    </button>
+                </div>
+            </header>
 
-            <!-- Image 4 -->
-            <div class="rounded-xl overflow-hidden polaroid rotate-2">
-                 <img src="img\Baby_brithday\bb4.jpg" 
-                      alt="Baby playing with toys" 
-                      class="w-full h-full object-contain">
-                <!-- <div class="font-marker polaroid-caption">Play Time</div> -->
-            </div>
+            <!-- Main Content -->
+            <main class="p-4 sm:p-6 md:p-10">
+                <div class="text-center mb-10 md:mb-16">
+                    <h1 class="font-pacifico text-4xl md:text-5xl text-[#db8989]">Baby's First Year</h1>
+                    <p class="mt-3 text-lg text-gray-600">A collection of cherished moments.</p>
+                </div>
 
-            <!-- Image 5 -->
-            <div class="rounded-xl overflow-hidden polaroid rotate-neg-3">
-                <img src="img\Baby_brithday\bb5.jpg" 
-                     alt="Baby's first steps" 
-                     class="w-full h-full object-contain">
-                <!-- <div class="font-marker polaroid-caption">First Steps</div> -->
-            </div>
+                <!-- Responsive Photo Collage Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[350px]">
+                    <!-- Image 1: Spans 2 cols & 2 rows on large screens -->
+                    <div class="lg:col-span-2 lg:row-span-2 rounded-xl polaroid rotate-neg-2">
+                        <img src="img/Baby_brithday/bb1.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x600/fecdd3/4c1d95?text=Image+Error';"
+                             alt="Baby's welcome home photo" 
+                             class="w-full h-full object-contain rounded-md">
+                    </div>
 
-            <!-- Image 6: Spans 2 columns on large screens -->
-            <div class="lg:col-span-0 rounded-xl overflow-hidden polaroid rotate-3">
-                <img src="img\Baby_brithday\bb6.jpg" 
-                     alt="Baby's first birthday cake smash" 
-                     class="w-full h-full object-contain">
-                <!-- <div class="font-marker polaroid-caption">One Year Old!</div> -->
-            </div>
+                    <!-- Image 2 -->
+                    <div class="rounded-xl polaroid rotate-1">
+                        <img src="img/Baby_brithday/bb2.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/a5b4fc/1e293b?text=Image+Error';"
+                             alt="Baby's first smile" 
+                             class="w-full h-full object-contain rounded-md">
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="rounded-xl polaroid rotate-neg-1">
+                        <img src="img/Baby_brithday/bb3.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/99f6e4/4a044e?text=Image+Error';"
+                             alt="Baby's bath time" 
+                             class="w-full h-full object-contain rounded-md">
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="rounded-xl polaroid rotate-2">
+                         <img src="img/Baby_brithday/bb4.jpg" 
+                              onerror="this.onerror=null;this.src='https://placehold.co/400x400/fde047/854d0e?text=Image+Error';"
+                              alt="Baby playing with toys" 
+                              class="w-full h-full object-contain rounded-md">
+                    </div>
+
+                    <!-- Image 5 -->
+                    <div class="rounded-xl polaroid rotate-neg-3">
+                        <img src="img/Baby_brithday/bb5.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/f9a8d4/831843?text=Image+Error';"
+                             alt="Baby's first steps" 
+                             class="w-full h-full object-contain rounded-md">
+                    </div>
+
+                    <!-- Image 6: Spans 2 columns on large screens -->
+                    <div class="lg:col-span-2 rounded-xl polaroid rotate-3">
+                        <img src="img/Baby_brithday/bb6.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/800x400/d8b4fe/3b0764?text=Image+Error';"
+                             alt="Baby's first birthday cake smash" 
+                             class="w-full h-full object-contain rounded-md">
+                    </div>
+                </div>
+            </main>
         </div>
     </div>
 
-      </div>
-    </div>
-  </body>
+    <script>
+        // JavaScript to toggle the mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
 </html>
