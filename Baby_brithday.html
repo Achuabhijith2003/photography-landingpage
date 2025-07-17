@@ -12,6 +12,35 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+     <style>
+        /* Custom font for the heading */
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the image container to create a polaroid effect */
+        .polaroid {
+            background-color: white;
+            padding: 1rem;
+            padding-bottom: 3rem; /* More space at the bottom for a classic look */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .polaroid:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 12px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        /* Add some random rotation to each polaroid */
+        .rotate-neg-2 { transform: rotate(-2deg); }
+        .rotate-2 { transform: rotate(2deg); }
+        .rotate-neg-1 { transform: rotate(-1deg); }
+        .rotate-1 { transform: rotate(1deg); }
+        .rotate-neg-3 { transform: rotate(-3deg); }
+        .rotate-3 { transform: rotate(3deg); }
+    </style>
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#fbf9f9] group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
@@ -49,66 +78,71 @@
             </button>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-col gap-2">
+        <!-- Responsive Photo Collage Grid -->
+        <!-- 
+            Responsive Photo Collage Grid 
+            - On small screens, it's a 1-column layout.
+            - On medium screens, 2 columns.
+            - On large screens, a more complex 4-column grid.
+            - `auto-rows-[300px]` or a similar value gives the grid rows a consistent height.
+        -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 auto-rows-[350px]">
 
-              <img src='img/Baby_Birthday/baby1.jpg' class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" alt="Baby Birthday Image 1">
-              </div>
-              <div class="flex flex-col gap-3">
+            <!-- Image 1: Spans 2 columns and 2 rows on large screens -->
+            <div class="lg:col-span-0 lg:row-span-0 rounded-xl  polaroid rotate-neg-2">
+                <!-- 
+                    KEY CHANGE: Used `object-contain` instead of `object-cover`.
+                    `object-contain` scales the image to fit inside the element's content box
+                    while maintaining its aspect ratio. This prevents cropping.
+                -->
+                <img src="img\Baby_brithday\bb1.jpg" 
+                     alt="Baby's welcome home photo" 
+                     class="w-full h-full object-contain">
+                <!-- <div class="font-marker polaroid-caption">Welcome Home</div> -->
+            </div>
 
-              <img src='img/Baby_Birthday/baby2.jpg' class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" alt="Baby Birthday Image 2">
-              </div>
+            <!-- Image 2 -->
+            <div class="rounded-xl overflow-hidden polaroid rotate-1">
+                <img src="img\Baby_brithday\bb2.jpg" 
+                     alt="Baby's first smile" 
+                     class="w-full h-full object-contain">
+                <!-- <div class="font-marker polaroid-caption">First Smile</div> -->
             </div>
-          </div>
+
+            <!-- Image 3 -->
+            <div class="rounded-xl overflow-hidden polaroid rotate-neg-1">
+                <img src="img\Baby_brithday\bb3.jpg" 
+                     alt="Baby's bath time" 
+                     class="w-full h-full object-contain">
+                <!-- <div class="font-marker polaroid-caption">Bath Time!</div> -->
+            </div>
+
+            <!-- Image 4 -->
+            <div class="rounded-xl overflow-hidden polaroid rotate-2">
+                 <img src="img\Baby_brithday\bb4.jpg" 
+                      alt="Baby playing with toys" 
+                      class="w-full h-full object-contain">
+                <!-- <div class="font-marker polaroid-caption">Play Time</div> -->
+            </div>
+
+            <!-- Image 5 -->
+            <div class="rounded-xl overflow-hidden polaroid rotate-neg-3">
+                <img src="img\Baby_brithday\bb5.jpg" 
+                     alt="Baby's first steps" 
+                     class="w-full h-full object-contain">
+                <!-- <div class="font-marker polaroid-caption">First Steps</div> -->
+            </div>
+
+            <!-- Image 6: Spans 2 columns on large screens -->
+            <div class="lg:col-span-0 rounded-xl overflow-hidden polaroid rotate-3">
+                <img src="img\Baby_brithday\bb6.jpg" 
+                     alt="Baby's first birthday cake smash" 
+                     class="w-full h-full object-contain">
+                <!-- <div class="font-marker polaroid-caption">One Year Old!</div> -->
+            </div>
         </div>
-         <footer class="flex flex-col gap-6 px-2 sm:px-5 py-10 text-center @container">
-            <div
-              class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 @[480px]:flex-row @[480px]:justify-around">
-              <a class="text-[#8c5a5a] text-base font-normal leading-normal min-w-40" href="index.html">Home</a>
-              <a class="text-[#8c5a5a] text-base font-normal leading-normal min-w-40" href="Portfolio.html">Portfolio</a>
-              <a class="text-[#8c5a5a] text-base font-normal leading-normal min-w-40" href="aboutus.html">About</a>
-              <!-- <a class="text-[#8c5a5a] text-base font-normal leading-normal min-w-40" href="#">Services</a> -->
-              <a class="text-[#8c5a5a] text-base font-normal leading-normal min-w-40" href="contact.html">Contact</a>
-            </div>
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
-              <a href="https://www.instagram.com/__fla_mi_ngo__?igsh=N2twM3U5MTJnbmpw">
-                <div class="text-[#8c5a5a]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                    viewBox="0 0 256 256">
-                    <path
-                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
-                    </path>
-                  </svg>
-                </div>
-              </a>
-              <a href="https://youtube.com/@flamingofebi?si=f0Uk317pSKypUHl7">
-                <div class="text-[#8c5a5a]" data-icon="YoutubeLogo" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                    viewBox="0 0 256 256">
-                    <path
-                      d="M250.34,78.52a24,24,0,0,0-16.9-17C217.13,56,128,56,128,56s-89.13,0-105.44,5.54a24,24,0,0,0-16.9,17C0,94.13,0,128,0,128s0,33.87,5.66,49.48a24,24,0,0,0,16.9,17C38.87,200,128,200,128,200s89.13,0,105.44-5.54a24,24,0,0,0,16.9-17C256,161.87,256,128,256,128S256,94.13,250.34,78.52ZM102.4,168V88l69.6,40Z"></path>
-                    </path>
-                  </svg>
-                </div>
-              </a>
-              <a href="#">
-                <div class="text-[#8c5a5a]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                    viewBox="0 0 256 256">
-                    <path
-                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
-                    </path>
-                  </svg>
-                </div>
-              </a>
-            </div>
-            <p class="text-[#8c5a5a] text-base font-normal leading-normal">© 2025 Flamingo Digital Arts & Studio. All rights reserved.
-            </p>
-          </footer>
-        </div>
-      </footer>
+    </div>
+
       </div>
     </div>
   </body>
